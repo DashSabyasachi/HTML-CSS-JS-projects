@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+#container{
+    position: relative;
+      left: 18%;
+      top: 5px;
+
+}
+.card{
+      height: 250px;
+      width: 250px;
+      border: 2px solid goldenrod;
+      border-radius: 20px;
+      position: relative;
+      left: 20%;
+}
+.btn{
+    padding: 15px;
+    border-radius: 10px;
+
+} 
+#black{
+    background-color: black;
+    color: #fff;
+}
+#blue{
+    background-color: blue;
+    color: #fff;
+}
+#red{
+    background-color: red;
+}
+#orange{
+    background-color: orange;
+}
+    </style>
+</head>
+<body style="background:linear-gradient(#fff,#121212); background-repeat: no-repeat;background-attachment: fixed;">
+    <div class="card"></div>
+
+<div id="container">
+    <button class="btn" id="black" height="20px" width="20px" style="display: inline-block;">BLACK</button>
+    <button class="btn" id="blue" height="20px" width="20px"style="display: inline-block;">BLUE</button>
+    <button class="btn" id="red" height="20px" width="20px" style="display: inline-block;">RED</button>
+    <button class="btn" id="orange" height="20px" width="20px" style="display: inline-block;">ORANGE</button>
+</div>
+
+<script>
+
+ let button1 = document.getElementById('black')
+ let card = document.querySelector('.card')
+
+ function cardChanger1(){
+    card.style.backgroundColor = 'black'
+ }
+
+ button1.addEventListener('click',cardChanger1)
+
+ let button2 = document.getElementById('blue')
+ function cardChanger2(){
+    card.style.backgroundColor = 'blue'
+ }
+ button2.addEventListener('click',cardChanger2)
+
+
+ let button3 = document.getElementById('red')
+ function cardChanger3(){
+    card.style.backgroundColor = 'red'
+ }
+ button3.addEventListener('click',cardChanger3)
+
+
+ let button4 = document.getElementById('orange')
+ function cardChanger4(){
+    card.style.backgroundColor = 'orange'
+ }
+ button4.addEventListener('click',cardChanger4)
+
+</script>
+</body>
+</html>
