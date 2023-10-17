@@ -1,0 +1,45 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+#inputField{
+    background-color: wheat;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+#AddBtn{
+    background-color: goldenrod;
+    padding: 5px;
+    margin: 5px;
+    border-radius: .2rem;
+}
+#ClsBtn{
+    background-color: palevioletred;
+    padding: 5px;
+    margin: 5px;
+    border-radius: .2rem;
+}
+.card {
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: cornflowerblue;
+    display: inline-block;
+    width: 150px;
+}
+.edit{
+    background-color: darkorange;
+    border-radius: .2rem;
+    margin-right: 20px;
+}
+.del{
+    background-color: brown;
+    color: beige;
+    border-radius: .2rem;
+}
