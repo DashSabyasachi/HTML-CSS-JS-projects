@@ -1,0 +1,55 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#container{
+    background-color: burlywood;
+    height: 500px;
+    width: 400px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+#move{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    background-color: deeppink;
+}
+#operate{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-between;
+    background-color:burlywood;
+}
+.btn{
+    background-color: cornflowerblue;
+    padding: 10px;
+    border-radius: .2rem;
+}
+#ball{
+    height: 50px;
+    width:50px;
+    background-color: goldenrod;
+    border: 2px solid black;
+    border-radius: 100%;
+}
+
+/* #ball:hover{
+    transform: translateX(150px);
+    transition: all 1s ease 0.1s;
+} */
+/* #ball:hover{
+    transform: translateY(150px);
+    transition: all 1s ease 0.1s;
+}
+#ball:hover{
+    transform: translateX(150px);
+    transition: all 1s ease 0.1s;
+}
+#ball:hover{
+    transform: translateX(150px);
+    transition: all 1s ease 0.1s;
+} */
