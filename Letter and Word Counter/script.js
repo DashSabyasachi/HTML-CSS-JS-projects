@@ -1,18 +1,15 @@
-let input = document.getElementById('input').value
+let input = document.getElementById('input')
 let btn = document.getElementById('btn')
 let word = document.getElementById('word')
 let letter = document.getElementById('letter')
 
+const countWords = () =>{
+     let words = input.value.split(' ').length;
+     word.innerText = words
+}
+btn.addEventListener("click",countWords)
+
 btn.addEventListener('click',()=>{
-     let TotalWord = input.split().filter(Boolean).length;
-     let TotalLetter = input.length;
-
-
-    //  function countChars(countfrom,displayto) {
-    //     var len = document.getElementById(countfrom).value.length;
-    //     document.getElementById(displayto).innerHTML = len;
-    //   }
-     word.innerText = TotalWord;
-     letter.innerText = TotalLetter;
-
+     let x = input.value.split(' ').join("").length 
+     letter.innerHTML = x;
 })
