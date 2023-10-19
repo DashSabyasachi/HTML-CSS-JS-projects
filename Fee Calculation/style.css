@@ -1,0 +1,15 @@
+nav{
+    background-color: gray;
+    
+}
+form{
+    padding: 50px;
+    background-color: #212121;
+    color: #fff;
+    height: 91vh;  
+}
+.error{
+    color: red;
+    font-style: italic;
+    font-size: medium;
+}
