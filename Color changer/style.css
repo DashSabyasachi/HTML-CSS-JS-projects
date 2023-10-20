@@ -1,0 +1,35 @@
+
+#container{
+    position: relative;
+      left: 18%;
+      top: 5px;
+
+}
+.card{
+      height: 250px;
+      width: 250px;
+      border: 2px solid goldenrod;
+      border-radius: 20px;
+      position: relative;
+      left: 20%;
+}
+.btn{
+    padding: 15px;
+    border-radius: 10px;
+
+} 
+#black{
+    background-color: black;
+    color: #fff;
+}
+#blue{
+    background-color: blue;
+    color: #fff;
+}
+#red{
+    background-color: red;
+}
+#orange{
+    background-color: orange;
+}
+    
