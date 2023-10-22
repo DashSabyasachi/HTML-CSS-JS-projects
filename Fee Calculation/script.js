@@ -29,28 +29,10 @@ function validation() {
       fee,
       category,
     };
-    // StudentArray.unshift(userData);
-    const key = Date.now().toString();
+  const key = Date.now().toString();
     localStorage.setItem(key, JSON.stringify(userData));
     // console.log(StudentArray)
     // alert("Data saved to local storage");
-
-    // window.location.href = "receipt.html";
-   
-    // fetch.innerHTML += `<li>Name: ${userData.name}, Gender: ${userData.gender}, Course: ${userData.course}, Fee: ${userData.fee}, Category: ${userData.category}</li>`;
-   
-
-// const fetch = document.getElementById("fetch");
-// if (StudentArray.length === 0) {
-//   fetch.innerHTML = "No student data available.";
-// } else {
-//   fetch.innerHTML = "<ul>";
-//   StudentArray.forEach(userData => {
-//     fetch.innerHTML += `<li>Name: ${userData.name}, Gender: ${userData.gender}, Course: ${userData.course}, Fee: ${userData.fee}, Category: ${userData.category}</li>`;
-//   });
-//   fetch.innerHTML += "</ul>";
-// }
-
   } else {
     alert("error");
   }
@@ -107,18 +89,14 @@ dropdown.addEventListener("change", function() {
 });
 
 let receipt = document.getElementById("receipt");
-receipt.addEventListener("click", validation);
+receipt.addEventListener("click", bill);
 
-function validation() {
+function bill() {
   // ... Your existing code to collect and store student data in local storage ...
-
-
 
   // After storing the data, navigate to the second page
   window.location.href = "receipt.html";
 }
-
-
 
 
 // Fetch all keys (timestamps) for student data from local storage
@@ -128,25 +106,8 @@ const keys = Object.keys(localStorage);
 keys.forEach(key => {
   const studentData = JSON.parse(localStorage.getItem(key));
   StudentArray.push(studentData);
-  // console.log(StudentArray)
-
-const fetch = document.getElementById("fetch");
-if (StudentArray.length === 0) {
-  fetch.innerHTML = "No student data available.";
-} else {
-  fetch.innerHTML = "<ul>";
-  StudentArray.forEach(userData => {
-    fetch.innerHTML += `<li>Name: ${userData.name}, Gender: ${userData.gender}, Course: ${userData.course}, Fee: ${userData.fee}, Category: ${userData.category}</li>`;
-  });
-  fetch.innerHTML += "</ul>";
-}
-
-
-
-
 });
-// Now, the students array contains data for all students
-// You can display or manipulate this data as needed
+
 
 
 
