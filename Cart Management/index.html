@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="addtocart.css">
+        <link rel="stylesheet" href="style.css">
         <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -12,15 +12,22 @@
         <div class="container">
             <div id="root"></div>
             <div class="sidebar">
-                <div class="head"><p>My Cart</p></div>
+                <div class="head"> <p id="p1">My Cart</p> <button id="btn" onclick="clearCart()">Clear all</button></div>
                 <div id="cartItem">Your cart is empty</div>
                 <div class="foot">
                     <h3>Total</h3>
-                    <h2 id="total">₹ 0.00</h2>
-                    
+                    <h2 id="total" class="ttl">₹ 0.00</h2>
+                </div>
+                <div class="SF">
+                    <h3>Shipping Fee</h3>
+                    <h2 id="sf">₹ 0.00</h2>
+                </div>
+                <div class="GT">
+                    <h3>Payble Amount</h3>
+                    <h2 id="gt">₹ 0.00</h2>
                 </div>
             </div>
         </div>
-        <script src="addtocart.js"></script>
+        <script src="script.js"></script>
     </body>
 </html>
