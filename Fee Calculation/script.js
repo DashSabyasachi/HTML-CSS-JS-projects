@@ -1,7 +1,7 @@
 let fetch = document.getElementById('fetch');
 let StudentArray =[]
 let btn = document.getElementById("btn");
-btn.addEventListener("click", validation);
+btn.addEventListener("click", validation)
 function validation() {
   let name = document.getElementById("name").value;
   let gender = document.querySelector('input[class="gender"]:checked').value;
@@ -30,15 +30,15 @@ function validation() {
       category,
     };
   const key = Date.now().toString();
-    localStorage.setItem(key, JSON.stringify(userData));
+  const serializedData = encodeURIComponent(JSON.stringify(studentData))
+    // localStorage.setItem(key, JSON.stringify(userData));
     // console.log(StudentArray)
     // alert("Data saved to local storage");
+    window.location.href = `receipt.html?data=${serializedData}`;
   } else {
     alert("error");
   }
 }
-
-
 const dropdown = document.getElementById("course");
 const payableFee = document.getElementById("fee");
 const category = document.getElementById('category')
@@ -87,28 +87,6 @@ dropdown.addEventListener("change", function() {
   })
 
 });
-
-let receipt = document.getElementById("receipt");
-receipt.addEventListener("click", bill);
-
-function bill() {
-  // ... Your existing code to collect and store student data in local storage ...
-
-  // After storing the data, navigate to the second page
-  window.location.href = "receipt.html";
-}
-
-
-// Fetch all keys (timestamps) for student data from local storage
-const keys = Object.keys(localStorage);
-
-// Iterate through each key and retrieve the corresponding student data
-keys.forEach(key => {
-  const studentData = JSON.parse(localStorage.getItem(key));
-  StudentArray.push(studentData);
-});
-
-
 
 
 
