@@ -31,8 +31,8 @@ const product = [
     },
     {
         id: 5,
-        image: 'image/aa-1.jpg',
-        title: 'Head Phones',
+        image: 'image/vv-5.jpg',
+        title: 'Multi Vitamin',
         price: 1000,
     }
 ];
