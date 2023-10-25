@@ -10,7 +10,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background:linear-gradient(pink,royalblue );
+    background: linear-gradient(295deg, #b82e35, #5aefe7);
 }
 .header{
     height: 80px;
@@ -107,6 +107,7 @@ body{
     border: 1px solid royalblue;
     border-radius: 5px;
     padding: 15px;
+    background-color: #fff;
 }
 .img-box{
     width: 100%;
