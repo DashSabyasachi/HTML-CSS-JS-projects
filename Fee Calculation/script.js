@@ -1,5 +1,5 @@
-let fetch = document.getElementById('fetch');
-let StudentArray =[]
+let studentList = document.getElementById("student-list");
+let StudentArray = JSON.parse(localStorage.getItem("students")) || [];
 let btn = document.getElementById("btn");
 btn.addEventListener("click", validation)
 function validation() {
@@ -13,32 +13,42 @@ function validation() {
   let feeerror = document.getElementById("feeerror");
   
   let isvalidate = true;
-  if (!name || !gender || !course || !fee || !category) {
+  if (!name || !gender || course === "Choose any course here" || !fee || category === "Choose your Category here") {
     isvalidate = false;
     nameerror.textContent = "required*";
     feeerror.textContent = "required*";
   } else if (!(name.trim().length > 5)) {
     isvalidate = false;
-    nameerror.textContent = "you must have to give more thn 6";
+    nameerror.textContent = "Name should be at least 6 characters long";
   } 
   if (isvalidate) {
-    const userData = {
+    const StudentData = {
       name,
       gender,
       course,
       fee,
       category,
     };
-  const key = Date.now().toString();
-  const serializedData = encodeURIComponent(JSON.stringify(studentData))
-    // localStorage.setItem(key, JSON.stringify(userData));
-    // console.log(StudentArray)
-    // alert("Data saved to local storage");
-    window.location.href = `receipt.html?data=${serializedData}`;
-  } else {
-    alert("error");
+    StudentArray.push(StudentData);
+    localStorage.setItem("students", JSON.stringify(StudentArray));
+
+    document.getElementById("name").value = "";
+    document.querySelector('input[class="gender"]:checked').checked = false;
+    document.getElementById("course").value = "Choose any course here";
+    document.getElementById("fee").value = "";
+    document.getElementById("category").value = "Choose your Category here";
+
+    displayStudentList();
+
+    nameerror.textContent = "";
+    feeerror.textContent = "";
+  }
+  else {
+    alert("Error: Please check the form and try again.");
   }
 }
+
+
 const dropdown = document.getElementById("course");
 const payableFee = document.getElementById("fee");
 const category = document.getElementById('category')
@@ -88,7 +98,29 @@ dropdown.addEventListener("change", function() {
 
 });
 
+function displayStudentList() {
+  studentList.innerHTML = "";
+
+  StudentArray.forEach((student, index) => {
+    const listItem = document.createElement("li");
+    listItem.innerHTML = `
+      <span><b>Name:</b> ${student.name}</span>
+      <span><b>Gender:</b> ${student.gender}</span>
+      <span><b>Course:</b> ${student.course}</span>
+      <span><b>Paid Fee:</b> ${student.fee}</span>
+      <span><b>Category:</b> ${student.category}</span>
+      <button   class="btn btn-danger" onclick="deleteStudent(${index})">Delete</button>
+    `;
+    studentList.appendChild(listItem);
+  });
+}
+
+function deleteStudent(index) {
+  StudentArray.splice(index, 1);
+  localStorage.setItem("students", JSON.stringify(StudentArray));
+  displayStudentList();
+}
 
 
-
+displayStudentList();
 
