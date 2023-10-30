@@ -17,3 +17,20 @@ form{
 #fetch{
     background-color:greenyellow;
 }
+table{
+    border: 1px solid white;
+    border-collapse: collapse;
+    width: 100%;
+}
+#tbl-heading{
+    background-color: #212121;
+    color: #fff;    
+}
+#tbl-body{
+    background-color: grey;
+    color: #212121;
+}
+td,th {
+    border: 1px solid white;
+    text-align:center;
+}
