@@ -1,6 +1,5 @@
 nav{
-    background-color: gray;
-    
+    background-color: gray;   
 }
 form{
     padding: 50px;
@@ -13,8 +12,13 @@ form{
     font-style: italic;
     font-size: medium;
 }
-
-#fetch{
+.receipt{
+    display: inline-block;
+    border: 2px outset goldenrod;
+    border-radius: .5rem;
+    position: relative;
+    left: 20px;
+    padding: 20px 40px ;
     background-color:greenyellow;
 }
 table{
