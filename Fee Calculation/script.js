@@ -94,24 +94,24 @@ dropdown.addEventListener("change", function () {
   });
 });
 
-function displayStudentList() {
-  studentList.innerHTML = "";
-  if(StudentArray.length>0){
-    const student = StudentArray[StudentArray.length - 1]
-    const listItem = document.createElement("li");
-    listItem.innerHTML = `
-      <span><b>Name:</b> ${student.name}</span><br>
-      <span><b>Gender:</b> ${student.gender}</span><br>
-      <span><b>Course:</b> ${student.course}</span><br>
-      <span><b>Paid Fee:</b> ${student.fee}</span><br>
-      <span><b>Category:</b> ${student.category}</span><br>
-      <a><i class='bx bxs-registered'> Registered</i></a>`;
+  function displayStudentList() {
+    studentList.innerHTML = "";
+    if(StudentArray.length>0){
+      const student = StudentArray[StudentArray.length - 1]
+      const listItem = document.createElement("li");
+      listItem.innerHTML = `
+        <span><b>Name:</b> ${student.name}</span><br>
+        <span><b>Gender:</b> ${student.gender}</span><br>
+        <span><b>Course:</b> ${student.course}</span><br>
+        <span><b>Paid Fee:</b> ${student.fee}</span><br>
+        <span><b>Category:</b> ${student.category}</span><br>
+        <a><i class='bx bxs-registered'> Registered</i></a>`;
 
-    studentList.setAttribute('class' ,'receipt')
-    studentList.appendChild(listItem);
-  };
- if(StudentArray.length==0){
-   studentList.classList.remove('receipt')
+      studentList.setAttribute('class' ,'receipt')
+      studentList.appendChild(listItem);
+    };
+  if(StudentArray.length==0){
+    studentList.classList.remove('receipt')
   }
 }
 
