@@ -74,10 +74,8 @@ function editf(id) {
     return data.id == id;
   });
   insertData.value = data.text;
-  AddBtn.innerText = "Save";
- 
+  AddBtn.innerText = "Save"; 
 }
-
 ClsBtn.addEventListener("click", (id) => {
   let z = TaskArr.filter((data) => {
     return data.id == id;
