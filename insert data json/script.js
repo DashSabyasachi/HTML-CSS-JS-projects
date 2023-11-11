@@ -32,11 +32,22 @@ function storeData() {
   } else {
     alert("No data to store.");
   }
+  const cardContainer = document.getElementById("cards");
+
+  let displayData = JSON.parse(localStorage.getItem("jsonData"));
+
+  console.log(displayData);
+  cardContainer.innerHTML = displayData.map((value) => {
+    return `<div class="card" style="width: 18rem">
+  <div class="card-body">
+    <h5 class="card-title">${value.id}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">${value.title}</h6>
+    <p class="card-text">
+    ${value.body}
+    </p>
+    <a href="#" class="card-link"></a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>`;
+  }).join("");
 }
-const cardContainer = document.getElementById("cards");
-
-let displayData = JSON.parse(localStorage.getItem("jsonData"));
-
-console.log(displayData)
-displayData.map((value) => {
-  console.log(value)});
